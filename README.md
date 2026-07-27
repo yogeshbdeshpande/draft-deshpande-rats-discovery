@@ -1,8 +1,8 @@
 <!-- regenerate: on (set to off if you edit this file) -->
 
-# TODO - Your title
+# Remote Attestation Entity Discovery
 
-This is the working area for the individual Internet-Draft, "TODO - Your title".
+This is the working area for the individual Internet-Draft, "Remote Attestation Entity Discovery".
 
 * [Editor's Copy](https://yogeshbdeshpande.github.io/draft-deshpande-rats-discovery/#go.draft-deshpande-rats-discovery.html)
 * [Datatracker Page](https://datatracker.ietf.org/doc/draft-deshpande-rats-discovery)
