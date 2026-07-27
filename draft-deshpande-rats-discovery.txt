@@ -97,7 +97,29 @@ Table of Contents
 
 1.1.  Need for RATS Discovery
 
+   Composite Attesters come with a varying degree of heterogeneity of
+   Evidence formats, depending on the type of Attesting Environments
+   that come with each Component Attester, for example, CPU variants or
+   GPU/FPGA variants.  When Attesters are composite, they needed to be
+   appraised by Multiple Verifiers.  These Verifier may not always be
+   colocated.  Similarly the Endorsements for such Attesters may not
+   come from a single authoritative source.  For example, CPU
+   Endorsements come from the premise of CPU Manufactuerer, while GPU
+   Endorsements may come from a trusted GPU Supply Chain.  In order to
+   conduct appraisal, one needs to discover the entities capable of
+   providing the required information to fulfil the desired role.
+
 1.2.  Discovery requirements
+
+   The discovery brings many aspects into consideration.
+
+   1.  Capability
+
+   2.  Protocol
+
+   3.  Geographical location
+
+   4.  Availability
 
 1.3.  Proposed Solution
 

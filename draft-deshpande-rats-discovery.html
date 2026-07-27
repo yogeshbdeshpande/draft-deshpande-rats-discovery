@@ -1202,14 +1202,33 @@ Then Endorsement entity discovery is required to fulfil the requirement for Endo
 <section id="section-1.1">
         <h3 id="name-need-for-rats-discovery">
 <a href="#section-1.1" class="section-number selfRef">1.1. </a><a href="#name-need-for-rats-discovery" class="section-name selfRef">Need for RATS Discovery</a>
-      </h3>
+        </h3>
+<p id="section-1.1-1">Composite Attesters come with a varying degree of heterogeneity of Evidence formats, depending on the type of Attesting Environments that come with each Component Attester, for example, CPU variants or GPU/FPGA variants. When Attesters are composite, they needed to be appraised by Multiple Verifiers.
+These Verifier may not always be colocated. Similarly the Endorsements for such Attesters may not come from a single authoritative source.
+For example, CPU Endorsements come from the premise of CPU Manufactuerer, while GPU Endorsements may come from a trusted GPU Supply Chain.
+In order to conduct appraisal, one needs to discover the entities capable of providing the required information to fulfil the desired role.<a href="#section-1.1-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="discovery-requirements">
 <section id="section-1.2">
         <h3 id="name-discovery-requirements">
 <a href="#section-1.2" class="section-number selfRef">1.2. </a><a href="#name-discovery-requirements" class="section-name selfRef">Discovery requirements</a>
-      </h3>
+        </h3>
+<p id="section-1.2-1">The discovery brings many aspects into consideration.<a href="#section-1.2-1" class="pilcrow">¶</a></p>
+<ol start="1" type="1" class="normal type-1" id="section-1.2-2">
+<li id="section-1.2-2.1">
+            <p id="section-1.2-2.1.1">Capability<a href="#section-1.2-2.1.1" class="pilcrow">¶</a></p>
+</li>
+          <li id="section-1.2-2.2">
+            <p id="section-1.2-2.2.1">Protocol<a href="#section-1.2-2.2.1" class="pilcrow">¶</a></p>
+</li>
+          <li id="section-1.2-2.3">
+            <p id="section-1.2-2.3.1">Geographical location<a href="#section-1.2-2.3.1" class="pilcrow">¶</a></p>
+</li>
+          <li id="section-1.2-2.4">
+            <p id="section-1.2-2.4.1">Availability<a href="#section-1.2-2.4.1" class="pilcrow">¶</a></p>
+</li>
+        </ol>
 </section>
 </div>
 <div id="proposed-solution">
