@@ -38,7 +38,7 @@ informative:
 
 --- abstract
 
-RATS Architecture defines various roles such as Attesters, Endorsers and Verifiers.  
+RATS Architecture defines various roles such as Attesters, Endorsers and Verifiers.
 These roles are performed by RATS Entities. When there are multiple entities in the ecosystem, they need to be discovered.
 This document specifies the problem space of RATS Entity discovery and provides solutions that can be applied to entities performing specific RATS roles.
 
