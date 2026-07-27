@@ -13,7 +13,12 @@ Expires: 28 January 2027
 
 Abstract
 
-   TODO Abstract
+   RATS Architecture defines various roles such as Attesters, Endorsers
+   and Verifiers.  These roles are performed by RATS Entities.  When
+   there are multiple entities in the ecosystem, they need to be
+   discovered.  This document specifies the problem space of RATS Entity
+   discovery and provides solutions that can be applied to entities
+   performing specific RATS roles.
 
 About This Document
 
@@ -76,7 +81,16 @@ Table of Contents
 
 1.  Introduction
 
-   TODO Introduction
+   Verifiers, Endorsers, and Attesters are roles defined in the RATS
+   Architecture [RFC9334].  One or more entities undertake these roles
+   to fulfil the functions mandated by these roles.  For example when
+   Mulitple Verifiers are required to perform the appraisal of a
+   composite attester, then these Verifiers needs to be discovered
+   before such trustworthy appraisal can be completed.  Similarly, when
+   Attesters are composite, the Verifier may need to obtain the
+   Endorsements from multiple sources before performing the appraisal.
+   Then Endorsement entity discovery is required to fulfil the
+   requirement for Endorsements.
 
 2.  Conventions and Definitions
 
