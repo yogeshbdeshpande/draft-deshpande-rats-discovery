@@ -54,7 +54,11 @@ then these Verifiers needs to be discovered before such trustworthy appraisal ca
 Similarly, when Attesters are composite, the Verifier may need to obtain the Endorsements from multiple sources before performing the appraisal.
 Then Endorsement entity discovery is required to fulfil the requirement for Endorsements.
 
+## Need for RATS Discovery
 
+## Discovery requirements
+
+## Proposed Solution
 
 # Conventions and Definitions
 
@@ -63,7 +67,7 @@ Then Endorsement entity discovery is required to fulfil the requirement for Endo
 
 # Security Considerations
 
-TODO Security
+Discovery intersection with Security
 
 
 # IANA Considerations
