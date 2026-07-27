@@ -55,8 +55,22 @@ Similarly, when Attesters are composite, the Verifier may need to obtain the End
 Then Endorsement entity discovery is required to fulfil the requirement for Endorsements.
 
 ## Need for RATS Discovery
+Composite Attesters come with a varying degree of heterogeneity of Evidence formats, depending on the type of Attesting Environments that come with each Component Attester, for example, CPU variants or GPU/FPGA variants. When Attesters are composite, they needed to be appraised by Multiple Verifiers.
+These Verifier may not always be colocated. Similarly the Endorsements for such Attesters may not come from a single authoritative source.
+For example, CPU Endorsements come from the premise of CPU Manufactuerer, while GPU Endorsements may come from a trusted GPU Supply Chain.
+In order to conduct appraisal, one needs to discover the entities capable of providing the required information to fulfil the desired role.
+
 
 ## Discovery requirements
+The discovery brings many aspects into consideration.
+
+1. Capability
+
+2. Protocol
+
+3. Geographical location
+
+4. Availability
 
 ## Proposed Solution
 
