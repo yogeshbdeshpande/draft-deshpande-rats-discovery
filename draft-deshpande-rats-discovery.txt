@@ -77,6 +77,8 @@ Table of Contents
      3.1.  Glossary
    4.  Discovery requirements
    5.  Proposed Solution
+     5.1.  Trust Establishment
+       5.1.1.  Mutual Attestation
    6.  Conventions and Definitions
    7.  Security Considerations
    8.  IANA Considerations
@@ -187,7 +189,20 @@ Table of Contents
 
 5.  Proposed Solution
 
-   // TO DO Specifcy Common Capability protocol that can be applied here
+   // TO DO Specify Common Capability conveyance protocol that can be
+   applied here
+
+5.1.  Trust Establishment
+
+   Trust among RATS Entities is based on following foundation ### Mutual
+   Authentication The communication entities identify each other
+   correctly.  This can be boot strapped by suitable Certifcate
+   Management
+
+5.1.1.  Mutual Attestation
+
+   The communication entities ensure that both the parties are operating
+   in a correct state.  This can be ensured using mutual attestation.
 
 6.  Conventions and Definitions
 
