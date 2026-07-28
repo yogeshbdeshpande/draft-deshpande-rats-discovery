@@ -4,7 +4,7 @@
 
 Remote ATtestation ProcedureS                               Y. Deshpande
 Internet-Draft                                                       Arm
-Intended status: Informational                              28 July 2026
+Intended status: Standards Track                            28 July 2026
 Expires: 29 January 2027
 
 
