@@ -4,8 +4,8 @@
 
 Remote ATtestation ProcedureS                               Y. Deshpande
 Internet-Draft                                                       Arm
-Intended status: Informational                              27 July 2026
-Expires: 28 January 2027
+Intended status: Informational                              28 July 2026
+Expires: 29 January 2027
 
 
                   Remote Attestation Entity Discovery
@@ -53,7 +53,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 28 January 2027.
+   This Internet-Draft will expire on 29 January 2027.
 
 Copyright Notice
 
@@ -72,13 +72,17 @@ Copyright Notice
 Table of Contents
 
    1.  Introduction
-     1.1.  Need for RATS Discovery
-     1.2.  Discovery requirements
-     1.3.  Proposed Solution
-   2.  Conventions and Definitions
-   3.  Security Considerations
-   4.  IANA Considerations
-   5.  Normative References
+   2.  Need for RATS Discovery
+   3.  Conventions and Definitions
+     3.1.  Glossary
+     3.2.  Discovery requirements
+     3.3.  Proposed Solution
+   4.  Conventions and Definitions
+   5.  Security Considerations
+   6.  IANA Considerations
+   7.  References
+     7.1.  Normative References
+     7.2.  Informative References
    Acknowledgments
    Author's Address
 
@@ -86,16 +90,20 @@ Table of Contents
 
    Verifiers, Endorsers, and Attesters are roles defined in the RATS
    Architecture [RFC9334].  One or more entities undertake these roles
-   to fulfil the functions mandated by these roles.  For example when
-   Mulitple Verifiers are required to perform the appraisal of a
-   composite attester, then these Verifiers needs to be discovered
-   before such trustworthy appraisal can be completed.  Similarly, when
-   Attesters are composite, the Verifier may need to obtain the
-   Endorsements from multiple sources before performing the appraisal.
-   Then Endorsement entity discovery is required to fulfil the
-   requirement for Endorsements.
+   to fulfil the functions mandated by these roles.  For example
+   Mulitple Verifiers may be required to perform the appraisal of a
+   composite attester.  When there are multiple Verifiers they need to
+   be discovered before trustworthy appraisal can be completed.
+   Similarly, when Attesters are composite, the Verifier or an
+   Aggregator in CoServ may need to obtain the Endorsements from
+   multiple sources, to perform the respective functions.  These sources
+   may need to be discovered to fetch the desired Endorsements.
 
-1.1.  Need for RATS Discovery
+   This document provides a generic architecture of discovery for RATS
+   Entities and defines a framework and protocols required to accomplish
+   discovery.
+
+2.  Need for RATS Discovery
 
    Composite Attesters come with a varying degree of heterogeneity of
    Evidence formats, depending on the type of Attesting Environments
@@ -109,9 +117,41 @@ Table of Contents
    conduct appraisal, one needs to discover the entities capable of
    providing the required information to fulfil the desired role.
 
-1.2.  Discovery requirements
+3.  Conventions and Definitions
 
-   The discovery brings many aspects into consideration.
+   The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
+   "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
+   "OPTIONAL" in this document are to be interpreted as described in
+   BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all
+   capitals, as shown here.
+
+   This document uses terms and concepts defined by the RATS
+   architecture.  For a complete glossary, see Section 4 of [RFC9334].
+
+3.1.  Glossary
+
+   This document uses the following terms:
+
+   RATS Entity:  A RATS Entity is an end point performing a specific
+      RATS Role, such as an Endorser or a Verifier.
+
+   Composite Attester:
+
+   A RATS Attester, which comprises of multiple components, which are
+   individual Component Attesters.
+
+   Component Attester:  A Component Attester is a single Attester of a
+      Composite Attester.  For this document, a Component Attester is an
+      entity which produces a single Evidence which can be appraised by
+      a Component Verifier.
+
+   Composite Evidence:  Evidence produced by a Composite Attester.  Also
+      referred to as CE in the document.
+
+3.2.  Discovery requirements
+
+   The discovery of any RATS Entity is built on the following
+   fundamental aspects.
 
    1.  Capability
 
@@ -121,9 +161,9 @@ Table of Contents
 
    4.  Availability
 
-1.3.  Proposed Solution
+3.3.  Proposed Solution
 
-2.  Conventions and Definitions
+4.  Conventions and Definitions
 
    The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
    "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
@@ -131,15 +171,17 @@ Table of Contents
    BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all
    capitals, as shown here.
 
-3.  Security Considerations
+5.  Security Considerations
 
    Discovery intersection with Security
 
-4.  IANA Considerations
+6.  IANA Considerations
 
    This document has no IANA actions.
 
-5.  Normative References
+7.  References
+
+7.1.  Normative References
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
@@ -149,6 +191,13 @@ Table of Contents
    [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
+
+7.2.  Informative References
+
+   [RFC9334]  Birkholz, H., Thaler, D., Richardson, M., Smith, N., and
+              W. Pan, "Remote ATtestation procedureS (RATS)
+              Architecture", RFC 9334, DOI 10.17487/RFC9334, January
+              2023, <https://www.rfc-editor.org/rfc/rfc9334>.
 
 Acknowledgments
 
