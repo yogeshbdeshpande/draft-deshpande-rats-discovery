@@ -2,7 +2,7 @@
 
 title: "Remote Attestation Entity Discovery"
 abbrev: "RED"
-category: info
+category: std
 
 docname: draft-deshpande-rats-discovery-latest
 submissiontype: IETF  # also: "independent", "editorial", "IAB", or "IRTF"
