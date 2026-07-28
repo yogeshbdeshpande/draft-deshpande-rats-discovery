@@ -95,18 +95,31 @@ Composite Evidence:
 : Evidence produced by a Composite Attester.
 Also referred to as CE in the document.
 
-## Discovery requirements
+# Discovery requirements
 The discovery of any RATS Entity is built on the following fundamental aspects.
 
 1. Capability
 
-2. Protocol
+Entities have varying degree of capabilities. For an Attester, its shape and form is heavily dependent on the underlying technology it supports.
+For example a Confidential Computing Attester from a specific Vendor will have a capability to produce Attestation Evidence pertaining to that technology.
+Similarly, a Verifier capable of Appraising an Evidence for a specific Attestation Scheme can ONLY perform Attestation Verification for a specific Evidence.
+Likewise an Endorsement Service from a specific Vendor may be capable of providing Endorsements pertaining to Attesters it manufactures.
 
-3. Geographical location
+2. Trust relationships
+Entities need to establish trust prior to exchanging RATS Conceptual Messages, For example, a Lead Verifier may need to establish trust in the Component Verifier, prior to exchanging Component Evidence.  Similarly an CoServ Aggrgator may need to establish trust in an Endorsement service, before it can obtain the Endorsements.
 
-4. Availability
 
-## Proposed Solution
+3. Policy Evaluation
+Entity Discovery MUST fulfil policy requirements prior to conclusion of a successful discovery.
+For example, Entities may be handling PII information in their processing and hence due to Legal and Governance restrictions, processing MAY only be allowed in certain geographical boundaries.
+
+4. Protocol Requirements
+In order to discover correct Entities, the communicating parties MUST establish a common protocol. The protocol must represent the essential discovery claims (such as capability information), upon whose processing a discovery match can be obtained.
+
+# Proposed Solution
+
+// TO DO Specifcy Common Capability protocol that can be applied here
+
 
 # Conventions and Definitions
 
