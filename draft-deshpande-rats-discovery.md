@@ -33,6 +33,7 @@ author:
 normative:
 
 informative:
+  RFC9334: rats-arch
 
 ...
 
