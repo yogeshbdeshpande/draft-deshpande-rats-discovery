@@ -1167,15 +1167,29 @@ This document specifies the problem space of RATS Entity discovery and provides 
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4">
             <p id="section-toc.1-1.4.1"><a href="#section-4" class="auto internal xref">4</a>.  <a href="#name-discovery-requirements" class="internal xref">Discovery requirements</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.1">
+                <p id="section-toc.1-1.4.2.1.1"><a href="#section-4.1" class="auto internal xref">4.1</a>.  <a href="#name-capability" class="internal xref">Capability</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.2">
+                <p id="section-toc.1-1.4.2.2.1"><a href="#section-4.2" class="auto internal xref">4.2</a>.  <a href="#name-trust-establishment" class="internal xref">Trust Establishment</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.3">
+                <p id="section-toc.1-1.4.2.3.1"><a href="#section-4.3" class="auto internal xref">4.3</a>.  <a href="#name-policy-evaluation" class="internal xref">Policy Evaluation</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.4">
+                <p id="section-toc.1-1.4.2.4.1"><a href="#section-4.4" class="auto internal xref">4.4</a>.  <a href="#name-protocol-requirements" class="internal xref">Protocol Requirements</a></p>
+</li>
+            </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5">
             <p id="section-toc.1-1.5.1"><a href="#section-5" class="auto internal xref">5</a>.  <a href="#name-proposed-solution" class="internal xref">Proposed Solution</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.1">
-                <p id="section-toc.1-1.5.2.1.1"><a href="#section-5.1" class="auto internal xref">5.1</a>.  <a href="#name-capability" class="internal xref">Capability</a></p>
+                <p id="section-toc.1-1.5.2.1.1"><a href="#section-5.1" class="auto internal xref">5.1</a>.  <a href="#name-capability-2" class="internal xref">Capability</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.2">
-                <p id="section-toc.1-1.5.2.2.1"><a href="#section-5.2" class="auto internal xref">5.2</a>.  <a href="#name-trust-establishment" class="internal xref">Trust Establishment</a></p>
+                <p id="section-toc.1-1.5.2.2.1"><a href="#section-5.2" class="auto internal xref">5.2</a>.  <a href="#name-trust-establishment-2" class="internal xref">Trust Establishment</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.2.2.1">
                     <p id="section-toc.1-1.5.2.2.2.1.1"><a href="#section-5.2.1" class="auto internal xref">5.2.1</a>.  <a href="#name-mutual-attestation" class="internal xref">Mutual Attestation</a></p>
@@ -1289,30 +1303,42 @@ Also referred to as CE in the document.<a href="#section-3.1-5.4.1" class="pilcr
 <a href="#section-4" class="section-number selfRef">4. </a><a href="#name-discovery-requirements" class="section-name selfRef">Discovery requirements</a>
       </h2>
 <p id="section-4-1">The discovery of any RATS Entity is built on the following fundamental aspects.<a href="#section-4-1" class="pilcrow">¶</a></p>
-<ol start="1" type="1" class="normal type-1" id="section-4-2">
-<li id="section-4-2.1">
-          <p id="section-4-2.1.1">Capability<a href="#section-4-2.1.1" class="pilcrow">¶</a></p>
-</li>
-      </ol>
-<p id="section-4-3">Entities have varying degree of capabilities. For an Attester, its shape and form is heavily dependent on the underlying technology it supports.
+<div id="capability">
+<section id="section-4.1">
+        <h3 id="name-capability">
+<a href="#section-4.1" class="section-number selfRef">4.1. </a><a href="#name-capability" class="section-name selfRef">Capability</a>
+        </h3>
+<p id="section-4.1-1">Entities have varying degree of capabilities. For an Attester, its shape and form is heavily dependent on the underlying technology it supports.
 For example a Confidential Computing Attester from a specific Vendor will have a capability to produce Attestation Evidence pertaining to that technology.
 Similarly, a Verifier capable of Appraising an Evidence for a specific Attestation Scheme can ONLY perform Attestation Verification for a specific Evidence.
-Likewise an Endorsement Service from a specific Vendor may be capable of providing Endorsements pertaining to Attesters it manufactures.<a href="#section-4-3" class="pilcrow">¶</a></p>
-<ol start="1" type="1" class="normal type-1" id="section-4-4">
-<li id="section-4-4.1">
-          <p id="section-4-4.1.1">Trust relationships
-Entities need to establish trust prior to exchanging RATS Conceptual Messages, For example, a Lead Verifier may need to establish trust in the Component Verifier, prior to exchanging Component Evidence.  Similarly an CoServ Aggrgator may need to establish trust in an Endorsement service, before it can obtain the Endorsements.<a href="#section-4-4.1.1" class="pilcrow">¶</a></p>
-</li>
-        <li id="section-4-4.2">
-          <p id="section-4-4.2.1">Policy Evaluation
-Entity Discovery <span class="bcp14">MUST</span> fulfil policy requirements prior to conclusion of a successful discovery.
-For example, Entities may be handling PII information in their processing and hence due to Legal and Governance restrictions, processing <span class="bcp14">MAY</span> only be allowed in certain geographical boundaries.<a href="#section-4-4.2.1" class="pilcrow">¶</a></p>
-</li>
-        <li id="section-4-4.3">
-          <p id="section-4-4.3.1">Protocol Requirements
-In order to discover correct Entities, the communicating parties <span class="bcp14">MUST</span> establish a common protocol. The protocol must represent the essential discovery claims (such as capability information), upon whose processing a discovery match can be obtained.<a href="#section-4-4.3.1" class="pilcrow">¶</a></p>
-</li>
-      </ol>
+Likewise an Endorsement Service from a specific Vendor may be capable of providing Endorsements pertaining to Attesters it manufactures.<a href="#section-4.1-1" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="trust-establishment">
+<section id="section-4.2">
+        <h3 id="name-trust-establishment">
+<a href="#section-4.2" class="section-number selfRef">4.2. </a><a href="#name-trust-establishment" class="section-name selfRef">Trust Establishment</a>
+        </h3>
+<p id="section-4.2-1">Entities need to establish trust prior to exchanging RATS Conceptual Messages, For example, a Lead Verifier may need to establish trust in the Component Verifier, prior to exchanging Component Evidence.  Similarly an CoServ Aggrgator may need to establish trust in an Endorsement service, before it can obtain the Endorsements.<a href="#section-4.2-1" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="policy-evaluation">
+<section id="section-4.3">
+        <h3 id="name-policy-evaluation">
+<a href="#section-4.3" class="section-number selfRef">4.3. </a><a href="#name-policy-evaluation" class="section-name selfRef">Policy Evaluation</a>
+        </h3>
+<p id="section-4.3-1">Entity Discovery <span class="bcp14">MUST</span> fulfil policy requirements prior to conclusion of a successful discovery.
+For example, Entities may be handling PII information in their processing and hence due to Legal and Governance restrictions, processing <span class="bcp14">MAY</span> only be allowed in certain geographical boundaries.<a href="#section-4.3-1" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="protocol-requirements">
+<section id="section-4.4">
+        <h3 id="name-protocol-requirements">
+<a href="#section-4.4" class="section-number selfRef">4.4. </a><a href="#name-protocol-requirements" class="section-name selfRef">Protocol Requirements</a>
+        </h3>
+<p id="section-4.4-1">In order to discover correct Entities, the communicating parties <span class="bcp14">MUST</span> establish a common protocol. The protocol must represent the essential discovery claims (such as capability information), upon whose processing a discovery match can be obtained.<a href="#section-4.4-1" class="pilcrow">¶</a></p>
+</section>
+</div>
 </section>
 </div>
 <div id="proposed-solution">
@@ -1320,18 +1346,18 @@ In order to discover correct Entities, the communicating parties <span class="bc
       <h2 id="name-proposed-solution">
 <a href="#section-5" class="section-number selfRef">5. </a><a href="#name-proposed-solution" class="section-name selfRef">Proposed Solution</a>
       </h2>
-<div id="capability">
+<div id="capability-1">
 <section id="section-5.1">
-        <h3 id="name-capability">
-<a href="#section-5.1" class="section-number selfRef">5.1. </a><a href="#name-capability" class="section-name selfRef">Capability</a>
+        <h3 id="name-capability-2">
+<a href="#section-5.1" class="section-number selfRef">5.1. </a><a href="#name-capability-2" class="section-name selfRef">Capability</a>
         </h3>
 <p id="section-5.1-1">Static pointers to capable Entities can be indicated using Manufacturer Usage Description (MUD) Uniform Resource Indicators (URIs).<a href="#section-5.1-1" class="pilcrow">¶</a></p>
 </section>
 </div>
-<div id="trust-establishment">
+<div id="trust-establishment-1">
 <section id="section-5.2">
-        <h3 id="name-trust-establishment">
-<a href="#section-5.2" class="section-number selfRef">5.2. </a><a href="#name-trust-establishment" class="section-name selfRef">Trust Establishment</a>
+        <h3 id="name-trust-establishment-2">
+<a href="#section-5.2" class="section-number selfRef">5.2. </a><a href="#name-trust-establishment-2" class="section-name selfRef">Trust Establishment</a>
         </h3>
 <p id="section-5.2-1">Trust among RATS Entities is based on following foundation
 ### Mutual Authentication

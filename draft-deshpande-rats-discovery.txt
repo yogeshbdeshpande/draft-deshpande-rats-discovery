@@ -76,6 +76,10 @@ Table of Contents
    3.  Conventions and Definitions
      3.1.  Glossary
    4.  Discovery requirements
+     4.1.  Capability
+     4.2.  Trust Establishment
+     4.3.  Policy Evaluation
+     4.4.  Protocol Requirements
    5.  Proposed Solution
      5.1.  Capability
      5.2.  Trust Establishment
@@ -156,7 +160,7 @@ Table of Contents
    The discovery of any RATS Entity is built on the following
    fundamental aspects.
 
-   1.  Capability
+4.1.  Capability
 
    Entities have varying degree of capabilities.  For an Attester, its
    shape and form is heavily dependent on the underlying technology it
@@ -168,25 +172,28 @@ Table of Contents
    Likewise an Endorsement Service from a specific Vendor may be capable
    of providing Endorsements pertaining to Attesters it manufactures.
 
-   1.  Trust relationships Entities need to establish trust prior to
-       exchanging RATS Conceptual Messages, For example, a Lead Verifier
-       may need to establish trust in the Component Verifier, prior to
-       exchanging Component Evidence.  Similarly an CoServ Aggrgator may
-       need to establish trust in an Endorsement service, before it can
-       obtain the Endorsements.
+4.2.  Trust Establishment
 
-   2.  Policy Evaluation Entity Discovery MUST fulfil policy
-       requirements prior to conclusion of a successful discovery.  For
-       example, Entities may be handling PII information in their
-       processing and hence due to Legal and Governance restrictions,
-       processing MAY only be allowed in certain geographical
-       boundaries.
+   Entities need to establish trust prior to exchanging RATS Conceptual
+   Messages, For example, a Lead Verifier may need to establish trust in
+   the Component Verifier, prior to exchanging Component Evidence.
+   Similarly an CoServ Aggrgator may need to establish trust in an
+   Endorsement service, before it can obtain the Endorsements.
 
-   3.  Protocol Requirements In order to discover correct Entities, the
-       communicating parties MUST establish a common protocol.  The
-       protocol must represent the essential discovery claims (such as
-       capability information), upon whose processing a discovery match
-       can be obtained.
+4.3.  Policy Evaluation
+
+   Entity Discovery MUST fulfil policy requirements prior to conclusion
+   of a successful discovery.  For example, Entities may be handling PII
+   information in their processing and hence due to Legal and Governance
+   restrictions, processing MAY only be allowed in certain geographical
+   boundaries.
+
+4.4.  Protocol Requirements
+
+   In order to discover correct Entities, the communicating parties MUST
+   establish a common protocol.  The protocol must represent the
+   essential discovery claims (such as capability information), upon
+   whose processing a discovery match can be obtained.
 
 5.  Proposed Solution
 
