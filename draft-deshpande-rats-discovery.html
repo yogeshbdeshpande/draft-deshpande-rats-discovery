@@ -1172,10 +1172,13 @@ This document specifies the problem space of RATS Entity discovery and provides 
             <p id="section-toc.1-1.5.1"><a href="#section-5" class="auto internal xref">5</a>.  <a href="#name-proposed-solution" class="internal xref">Proposed Solution</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.1">
-                <p id="section-toc.1-1.5.2.1.1"><a href="#section-5.1" class="auto internal xref">5.1</a>.  <a href="#name-trust-establishment" class="internal xref">Trust Establishment</a></p>
+                <p id="section-toc.1-1.5.2.1.1"><a href="#section-5.1" class="auto internal xref">5.1</a>.  <a href="#name-capability" class="internal xref">Capability</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.2">
+                <p id="section-toc.1-1.5.2.2.1"><a href="#section-5.2" class="auto internal xref">5.2</a>.  <a href="#name-trust-establishment" class="internal xref">Trust Establishment</a></p>
 <ul class="compact toc ulBare ulEmpty">
-<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.1.2.1">
-                    <p id="section-toc.1-1.5.2.1.2.1.1"><a href="#section-5.1.1" class="auto internal xref">5.1.1</a>.  <a href="#name-mutual-attestation" class="internal xref">Mutual Attestation</a></p>
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.2.2.1">
+                    <p id="section-toc.1-1.5.2.2.2.1.1"><a href="#section-5.2.1" class="auto internal xref">5.2.1</a>.  <a href="#name-mutual-attestation" class="internal xref">Mutual Attestation</a></p>
 </li>
                 </ul>
 </li>
@@ -1317,21 +1320,28 @@ In order to discover correct Entities, the communicating parties <span class="bc
       <h2 id="name-proposed-solution">
 <a href="#section-5" class="section-number selfRef">5. </a><a href="#name-proposed-solution" class="section-name selfRef">Proposed Solution</a>
       </h2>
-<p id="section-5-1">// TO DO Specify Common Capability conveyance protocol that can be applied here<a href="#section-5-1" class="pilcrow">¶</a></p>
-<div id="trust-establishment">
+<div id="capability">
 <section id="section-5.1">
-        <h3 id="name-trust-establishment">
-<a href="#section-5.1" class="section-number selfRef">5.1. </a><a href="#name-trust-establishment" class="section-name selfRef">Trust Establishment</a>
+        <h3 id="name-capability">
+<a href="#section-5.1" class="section-number selfRef">5.1. </a><a href="#name-capability" class="section-name selfRef">Capability</a>
         </h3>
-<p id="section-5.1-1">Trust among RATS Entities is based on following foundation
+<p id="section-5.1-1">Static pointers to capable Entities can be indicated using Manufacturer Usage Description (MUD) Uniform Resource Indicators (URIs).<a href="#section-5.1-1" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="trust-establishment">
+<section id="section-5.2">
+        <h3 id="name-trust-establishment">
+<a href="#section-5.2" class="section-number selfRef">5.2. </a><a href="#name-trust-establishment" class="section-name selfRef">Trust Establishment</a>
+        </h3>
+<p id="section-5.2-1">Trust among RATS Entities is based on following foundation
 ### Mutual Authentication
-The communication entities identify each other correctly. This can be boot strapped by suitable Certifcate Management<a href="#section-5.1-1" class="pilcrow">¶</a></p>
+The communication entities identify each other correctly. This can be boot strapped by suitable Certifcate Management<a href="#section-5.2-1" class="pilcrow">¶</a></p>
 <div id="mutual-attestation">
-<section id="section-5.1.1">
+<section id="section-5.2.1">
           <h4 id="name-mutual-attestation">
-<a href="#section-5.1.1" class="section-number selfRef">5.1.1. </a><a href="#name-mutual-attestation" class="section-name selfRef">Mutual Attestation</a>
+<a href="#section-5.2.1" class="section-number selfRef">5.2.1. </a><a href="#name-mutual-attestation" class="section-name selfRef">Mutual Attestation</a>
           </h4>
-<p id="section-5.1.1-1">The communication entities ensure that both the parties are operating in a correct state. This can be ensured using mutual attestation.<a href="#section-5.1.1-1" class="pilcrow">¶</a></p>
+<p id="section-5.2.1-1">The communication entities ensure that both the parties are operating in a correct state. This can be ensured using mutual attestation.<a href="#section-5.2.1-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
