@@ -118,7 +118,9 @@ In order to discover correct Entities, the communicating parties MUST establish 
 
 # Proposed Solution
 
-// TO DO Specify Common Capability conveyance protocol that can be applied here
+## Capability
+
+Static pointers to capable Entities can be indicated using Manufacturer Usage Description (MUD) Uniform Resource Indicators (URIs).
 
 ## Trust Establishment
 
