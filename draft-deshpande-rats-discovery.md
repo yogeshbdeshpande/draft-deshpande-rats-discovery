@@ -118,7 +118,17 @@ In order to discover correct Entities, the communicating parties MUST establish 
 
 # Proposed Solution
 
-// TO DO Specifcy Common Capability protocol that can be applied here
+// TO DO Specify Common Capability conveyance protocol that can be applied here
+
+## Trust Establishment
+
+Trust among RATS Entities is based on following foundation
+### Mutual Authentication
+The communication entities identify each other correctly. This can be boot strapped by suitable Certifcate Management
+
+### Mutual Attestation
+The communication entities ensure that both the parties are operating in a correct state. This can be ensured using mutual attestation.
+
 
 
 # Conventions and Definitions
