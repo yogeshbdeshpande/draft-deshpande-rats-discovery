@@ -49,20 +49,53 @@ This document specifies the problem space of RATS Entity discovery and provides 
 
 Verifiers, Endorsers, and Attesters are roles defined in the RATS Architecture [RFC9334].
 One or more entities undertake these roles to fulfil the functions mandated by these roles.
-For example when Mulitple Verifiers are required to perform the appraisal of a composite attester,
-then these Verifiers needs to be discovered before such trustworthy appraisal can be completed.
-Similarly, when Attesters are composite, the Verifier may need to obtain the Endorsements from multiple sources before performing the appraisal.
-Then Endorsement entity discovery is required to fulfil the requirement for Endorsements.
+For example Mulitple Verifiers may be required to perform the appraisal of a composite attester.
+When there are multiple Verifiers they need to be discovered before trustworthy appraisal can be completed.
+Similarly, when Attesters are composite, the Verifier or an Aggregator in CoServ may need to obtain the Endorsements
+from multiple sources, to perform the respective functions. These sources may need to be discovered to fetch the desired Endorsements.
 
-## Need for RATS Discovery
+This document provides a generic architecture of discovery for RATS Entities and defines a framework and protocols required to accomplish
+discovery.
+
+
+# Need for RATS Discovery
 Composite Attesters come with a varying degree of heterogeneity of Evidence formats, depending on the type of Attesting Environments that come with each Component Attester, for example, CPU variants or GPU/FPGA variants. When Attesters are composite, they needed to be appraised by Multiple Verifiers.
 These Verifier may not always be colocated. Similarly the Endorsements for such Attesters may not come from a single authoritative source.
 For example, CPU Endorsements come from the premise of CPU Manufactuerer, while GPU Endorsements may come from a trusted GPU Supply Chain.
 In order to conduct appraisal, one needs to discover the entities capable of providing the required information to fulfil the desired role.
 
 
+# Conventions and Definitions
+
+{::boilerplate bcp14}
+
+This document uses terms and concepts defined by the RATS architecture. For a complete glossary, see {{Section 4 of -rats-arch}}.
+
+## Glossary
+{: #sec-glossary }
+
+This document uses the following terms:
+
+RATS Entity:
+
+: A RATS Entity is an end point performing a specific RATS Role, such as an Endorser or a Verifier.
+
+Composite Attester:
+
+A RATS Attester, which comprises of multiple components, which are individual Component Attesters.
+
+Component Attester:
+
+: A Component Attester is a single Attester of a Composite Attester.
+For this document, a Component Attester is an entity which produces a single Evidence which can be appraised by a Component Verifier.
+
+Composite Evidence:
+
+: Evidence produced by a Composite Attester.
+Also referred to as CE in the document.
+
 ## Discovery requirements
-The discovery brings many aspects into consideration.
+The discovery of any RATS Entity is built on the following fundamental aspects.
 
 1. Capability
 
